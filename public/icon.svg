@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1017"/>
+      <stop offset="50%" stop-color="#141724"/>
+      <stop offset="100%" stop-color="#08090d"/>
+    </linearGradient>
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff55a3"/>
+      <stop offset="100%" stop-color="#ff007f"/>
+    </linearGradient>
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGradient)"/>
+  
+  <!-- Subtle border with neon hint -->
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="#ff007f" stroke-opacity="0.25" stroke-width="4"/>
+
+  <!-- Background glow orb -->
+  <circle cx="256" cy="220" r="140" fill="#ff007f" fill-opacity="0.12" filter="url(#softGlow)"/>
+
+  <!-- Inner glass shield -->
+  <rect x="76" y="76" width="360" height="360" rx="72" fill="#181b2a" fill-opacity="0.75" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+  <!-- Clock & Heart / Routine Symbol -->
+  <!-- Outer circle clock dial -->
+  <circle cx="256" cy="256" r="120" fill="none" stroke="url(#neonPurple)" stroke-opacity="0.4" stroke-width="8" stroke-dasharray="8 12"/>
+  <circle cx="256" cy="256" r="105" fill="none" stroke="url(#neonPink)" stroke-width="7" filter="url(#neonGlow)"/>
+
+  <!-- Clock Hands -->
+  <line x1="256" y1="256" x2="256" y2="185" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="310" y2="256" stroke="#ff007f" stroke-width="8" stroke-linecap="round" filter="url(#neonGlow)"/>
+  <circle cx="256" cy="256" r="10" fill="#ff55a3" filter="url(#neonGlow)"/>
+
+  <!-- Diet Avocado / Cutlery & Star badges -->
+  <g transform="translate(140, 160) scale(0.7)">
+    <path d="M 0 0 C 15 -15, 35 -15, 50 0 C 65 15, 65 35, 50 50 C 35 65, 15 65, 0 50 Z" fill="#10b981" fill-opacity="0.85"/>
+    <circle cx="25" cy="25" r="12" fill="#047857"/>
+  </g>
+
+  <!-- Neon reminder bell / star badge -->
+  <g transform="translate(315, 145) scale(0.75)" filter="url(#neonGlow)">
+    <circle cx="24" cy="24" r="26" fill="#ff007f"/>
+    <!-- Bell icon -->
+    <path d="M24 10 C20 10 17 13 17 17 V24 L14 27 V29 H34 V27 L31 24 V17 C31 13 28 10 24 10 Z M22 31 C22 32.1 22.9 33 24 33 C25.1 33 26 32.1 26 31 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Sparkles / Glow dots -->
+  <circle cx="160" cy="340" r="5" fill="#ff55a3" filter="url(#neonGlow)"/>
+  <circle cx="360" cy="330" r="4" fill="#a855f7" filter="url(#neonGlow)"/>
+  <circle cx="210" cy="140" r="3" fill="#ffffff"/>
+</svg>
